@@ -20,33 +20,27 @@
   <button onclick="loadCharacter()">Load</button>
 
   <div id="writer"></div>
+  <div id="character-target-div"></div>
+<button id="animate-button">Animate</button>
+
+  
 
   <script>
-    let writer = null;
-
-    function loadCharacter() {
-      const char = document.getElementById("hanziInput").value.trim();
-      if (!char) return;
-
-      // Clear previous writer
-      document.getElementById("writer").innerHTML = "";
-
-      writer = HanziWriter.create('writer', char, {
-        width: 300,
-        height: 300,
-        padding: 10,
-        showOutline: true,
-        showCharacter: true,
-        strokeAnimationSpeed: 1,
-        delayBetweenStrokes: 200,
-      });
-
-      writer.quiz();
+    var writer = HanziWriter.create('character-target-div', '测', {
+    width: 150,
+    height: 150,
+    showCharacter: false,
+  padding: 5
+  });
+  writer.quiz();
+      
+   
     }
   </script>
 
 </body>
 </html>
+
 
 
 
