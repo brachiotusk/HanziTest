@@ -107,6 +107,16 @@
       console.log("Starting test for:", targetHanzi);
     }
 
+    function drawHanzi() {
+      if (!targetHanzi) return;
+
+      ctx.font = "200px serif";
+      ctx.textAlign = "center"
+      ctx.textBaseline = "middle";
+      ctx.fillStyle = "red";
+      ctx.fillText(targetHanzi, canvas.width/2), canvas.height/2);
+    }
+
 
     function finishDrawing() {
       console.log("User strokes:", strokes);
@@ -118,6 +128,7 @@
 
 </body>
 </html>
+
 
 
 
